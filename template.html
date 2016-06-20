@@ -1,0 +1,684 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+<title>Top Tours in Italy by Nick Solipaca</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/last.css" rel="stylesheet" type="text/css">
+
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+
+
+<!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+	function getBlogPosts() {
+		jQuery.getJSON("https://public-api.wordpress.com/rest/v1.1/sites/toptoursinitaly.ipassion.it/posts/?number=4", function(data) {
+			var items = [];
+			var limited_text = "";
+			jQuery.each(data.posts, function(key, post) {
+				limited_text = jQuery(post.content).text().split(' ').slice(0,39).join(' ');
+				items.push('<div class="col-sm-3"><h3>'+post.title+'</h3><div class="post-content">'+limited_text+'...</div><div class="read-more-link"><a href="'+post.URL+'">Read More <i class="fa fa-arrow-right"></i></a></div></div>');
+				});
+			jQuery(items.join("")).appendTo('#blog-posts');
+		});
+	}
+</script>
+
+
+</head>
+<body>
+<div class="videoBackgroundContainer">
+	<div class="videoWrapper">
+	    <video
+	        autoplay=""
+	        loop=""
+	        class="videoBackground"
+	        poster=""
+	    >
+	        <source 
+	            src="media/roma.m4v"
+	            type="video/mp4"
+	        >
+	        Your browser does not support the video tag. I suggest you upgrade your browser.
+	    </video>
+   	</div>
+    <div class="videoBackgroundOverlay">&nbsp;</div>
+    <header class="header" id="header"><!--header-start-->
+    	<div class="container">	
+    	<!--<figure class="logo animated fadeInDown delay-07s">
+    		<a href="#"><img src="img/logo.png" alt=""></a>	
+    	</figure>-->
+            <h1 class="animated fadeInDown delay-05s">
+            	Top Tours In Italy<br/>
+            	<small>by</small> Nick Solipaca
+            </h1>
+
+            <div class="we-create slide">
+	            	<div class="row">
+		            	<a href="#Portfolio" onclick="filterTours('.shore');">	
+	            		     <h2 class="wow bounceInDown"  data-wow-duration="2s" data-wow-delay="1s">Shore Excursions</h2>
+                        </a>
+                        <a href="#Portfolio" onclick="filterTours('*');">
+						  <h2 class="wow bounceInDown" data-wow-duration="2s" data-wow-delay="1.2s">Private Guided Tours</h2>
+                        </a>
+                        <a href="#Portfolio" onclick="filterTours('.featured');">
+	            		     <h2 class="wow bounceInDown" data-wow-duration="2s" data-wow-delay="1.4s">Transfers All Over Italy</h2>
+                        </a>
+	            		
+            		</div>
+	            <a id="get-in-touch" class="link animated fadeInUp delay-05s" href="#contact">Get in Touch</a>
+             </div> 
+        <div id="tripadvisor" class="slide"><a href="#excellence"><img src="media/excellent-tripadvisor.png" alt=""></a></div>
+        
+        <div id="scrolldown" class="animated fadeInUp delay-1s slide"><a href="#service"><i class="fa fa-chevron-circle-down"></i></a></div>
+    </header><!--header-end-->
+</div>
+
+
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li><a href="#header">Top</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#Portfolio">Tours</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#team">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav><!--main-nav-end-->
+
+
+
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+    	<h2>Services</h2>
+    	<h6>We are a team of tour managers, tour escorts, professional drivers and guides operating in Rome and all over Italy.
+    	</h6>
+        <div class="row slide">
+        	<div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+            	<div class="service-list">
+                	<div class="service-list-col1">
+                    	<a href="#Portfolio" onclick="filterTours('.shore');"><i class="fa fa-ship"></i></a>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3><a href="#Portfolio" onclick="filterTours('.shore');">Limousine Shore Excursions</a></h3>
+                        <p>We can tour you through the beauties of Italy and be your guides in: Rome, Latium, Umbria, Marche, Florence, Livorno, Tuscany, Bologna, Genova, Liguria, Naples, Pompeii and Amalfi coast, and other regions.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                	<div class="service-list-col1">
+                    	<a href="#Portfolio" onclick="filterTours('*');"><i class="fa fa-street-view"></i></a>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3><a href="#Portfolio" onclick="filterTours('*');">Private Guided Tours</a></h3>
+                        <p>We provide Tailor Made Tours designed with you, giving you the flexibility to mix and match the tours we offer and to choose the best options suited to you.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                	<div class="service-list-col1">
+                    	<a href="#Portfolio" onclick="filterTours('.featured');"><i class="fa fa-plane"></i></a>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3><a href="#Portfolio" onclick="filterTours('.featured');">Airport Transfers All Over Italy</a></h3>
+                        <p>Our fluent English speaking driver will meet you at your gate exit and help you with your baggage. We can transfer you all over Italy, also with interesting alternative itineraries.</p>
+                    </div>
+                </div>
+            </div>
+            <figure id="mercedes" class="col-lg-6 col-sm-6  text-right wow fadeInUp delay-02s">
+            	<img src="media/mercedes.jpg" alt="">
+            </figure>
+        
+        </div>
+	</div>
+</section><!--main-section-end-->
+
+<section id="mission" class="parallax" data-speed="2" data-type="background">
+	<div class="overlay-black">
+	<h2 class="wow bounceInUp">Our purpose is to promote private tours for small groups as well as for individuals in Rome and all over Italy.</h2>
+	</div>
+</section>
+
+<section class="main-section alabaster" id="excellence"><!--main-section alabaster-start-->
+	<div class="container">
+    	<div class="row">
+			<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+            	<img  src="media/tesserini.png" alt="">
+            </figure>
+        	<div class="col-lg-7 col-sm-8 featured-work">
+            	<h2>Excellence at your service</h2>
+            	<P class="padding-b"></P>
+            	<div class="featured-box">
+            		<div class="featured-box-col1 wow fadeInRight delay-02s">
+            	    	<i class="fa fa-certificate"></i>
+            	    </div>	
+            		<div class="featured-box-col2 wow fadeInRight delay-02s">
+            	        <h3>CERTIFIED AND LICENSED</h3>
+            	        <p>We are Certified Tour Escorts and Tour Guides of Rome and its Province, Licensed Vatican Guides and Licensed Professional Drivers. Learn More</p>
+            	    </div>    
+            	</div>
+            	<div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-04s">
+                    	<i class="fa fa-star"></i>
+                    </div>	
+                	<div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>EXCLUSIVE VIP SERVICE</h3>
+                        <p>We provided services to many Celebrities and have an unsurpassed reliability record, because all our Customers are VIPs to us! Testimonials</p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-06s">
+                    	<i class="fa fa-car"></i>
+                    </div>	
+                	<div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>LUXURY LIMOUSINE FLEET</h3>
+                        <p>We provide Mercedes-Benz and Jaguar Luxury Sedan and Van Transportation for your Airport Transfers, Excursions and Private Tours. Learn More</p>
+                    </div>    
+                </div>
+                <div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-08s">
+                    	<a href="https://www.tripadvisor.it/Attraction_Review-g187791-d4458769-Reviews-Top_Tours_in_Italy_Private_Day_Tours-Rome_Lazio.html" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+                    </div>	
+                	<div class="featured-box-col2 wow fadeInRight delay-08s">
+                        <h3>RATED "EXCELLENT" ON TRIPADVISOR</h3>
+                        <p>Don't take our word for it, <a href="https://www.tripadvisor.it/Attraction_Review-g187791-d4458769-Reviews-Top_Tours_in_Italy_Private_Day_Tours-Rome_Lazio.html" target="_blank">check out our reviews on TripAdvisor</a>!</p>
+                    </div>    
+                </div>
+                <a class="Learn-More" href="#">Learn More</a>
+            </div>
+        </div>
+	</div>
+</section><!--main-section alabaster-end-->
+
+
+
+<section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+	<div class="container">
+    	<h2>Tours &amp; Transfers</h2>
+    	<h6>Our fluent English speaking drivers and certified guides will tour you and your friends through the beauties of Italy.<br/>Our Luxury Limousines and Vans can accommodate <b>up to 8 people</b>.</h6>
+      <div class="portfolioFilter">  
+        <ul class="Portfolio-nav wow fadeIn delay-02s">
+        	<li><a href="#" data-filter="*">All</a></li>
+        	<li><a href="#" data-filter=".featured" class="current">Featured</a></li>
+            <li><a href="#" data-filter=".rome" >Rome &amp; Vatican</a></li>
+            <li><a href="#" data-filter=".airport" >Fiumicino &amp; Ciampino Airports</a></li>
+            <li><a href="#" data-filter=".shore" >Shore Excursions</a></li>
+            <li><a href="#" data-filter=".lazio" >Near Rome</a></li>
+            <li><a href="#" data-filter=".naples" >Naples</a></li>
+            <li><a href="#" data-filter=".tuscany" >Tuscany</a></li>
+            <li><a href="#" data-filter=".full-day" >Full-Day</a></li>
+            <li><a href="#" data-filter=".half-day" >Half-Day</a></li>
+        </ul>
+       </div> 
+        
+	</div>
+    <div class="portfolioContainer wow fadeInUp delay-04s">
+            	<div class="Portfolio-box featured airport shore">
+                	<a href="#"><img src="media/tours/dock-transfers-560x460.jpg" alt="Airport Transfers"></a>	
+                	<h3>Transfer: Shore <i class="fa fa-exchange" aria-hidden="true"></i> Airport</h3>
+                    <p>From/To Civitavecchia Pier, FCO or CIA Airports</p>
+                </div>
+                <div class="Portfolio-box featured rome full-day half-day">
+                	<a href="#"><img src="media/tours/rome-highlights-560x460.jpg" alt="Best Of Rome Highlights Tour"></a>	
+                	<h3>Best of Rome Highlights</h3>
+                    <p>Visiting Rome for just one day? Get the best out of your stay!</p>
+                </div>
+                <div class="Portfolio-box featured airport shore">
+                	<a href="#"><img src="media/tours/airport-transfers-560x460.jpg" alt="Transfers all Over Italy"></a>	
+                	<h3>Transfers All Over Italy</h3>
+                    <p>We can pick you up and take you to your destination in Rome, Florence, Livorno, Naples or anywhere in the country!</p>
+                </div>
+                <div class="Portfolio-box airport">
+                    <a href="#"><img src="media/tours/airport-transfers-560x460.jpg" alt="Transfers all Over Italy"></a>    
+                    <h3>Fiumicino and Ciampino Rome Airports Transfers</h3>
+                    <p>Get you and your party to your destination in Rome, Florence, Livorno, Naples or other cities without being hassled or having to wait in line for taxi services.</p>
+                </div>
+                <div class="Portfolio-box rome shore half-day">
+                	<a href="#"><img src="media/tours/vatican-museums-560x460.jpg" alt="Vatican Museums"></a>
+                	<h3>The Vatican Private Guided Tour</h3>
+                	<p>A 4-hour car and driving tour with certified guide to the discovery of art, history and religion of the smallest state in the world.</p>
+                </div>
+                <div class="Portfolio-box rome shore half-day">
+                	<a href="#"><img src="media/tours/Pope-Francis-wikimedia-by-Alfredo-Borba-560x460.jpg" alt="Pope Audience and Blessing"></a>
+                	<h3>Pope Francis’ Audience and Blessing</h3>
+                	<p>Includes reservation of seats for the audience!</p>
+                </div>
+                <div class="Portfolio-box rome shore half-day">
+                	<a href="#"><img src="media/tours/Rome-by-night-Castel-santangelo-wikimedia-by-NormanB-560x460.jpg" alt="Rome by Night"></a>
+                	<h3>Best of Rome by Night</h3>
+                	<p>This excursion is designed to enjoy the highlights of Rome and its Monuments after the sun has set.</p>
+                </div>
+                <div class="Portfolio-box rome shore">
+                	<a href="#"><img src="media/tours/foro-romano-by-Stefan-Bauer-560x460.jpg" alt="Ancient Rome"></a>
+                	<h3>The Ancient Rome Tour</h3>
+                	<p>Explore thousands of years of Roman history as you pass the city’s ancient landmarks.</p>
+                </div>
+                <div class="Portfolio-box lazio rome shore">
+                	<a href="#"><img src="media/tours/Catacombe-di-san-callisto-wikimedia-by-User-GerardM-on-nl-560x460.jpg" alt="Catacombs Tour"></a>
+                	<h3>Rome’s Catacombs Tour</h3>
+                	<p>Our authorised private guide will lead you through these underground tunnels, rich in early Christian symbolism.</p>
+                </div>
+                <div class="Portfolio-box lazio shore">
+                	<a href="#"><img src="media/tours/ariccia-560x460.jpg" alt="Rome's Castles"></a>
+                	<h3>Castles of Rome Tour</h3>
+                	<p>Full-day driving tour with walking guide on request in the natural and artistic beauty of the small medieval villages outside Rome.</p>
+                </div>
+                <div class="Portfolio-box lazio shore">
+                	<a href="#"><img src="media/tours/villa-adriana-tivoli-maritime-theatre-wikimedia-by-Camelia-560x460.jpg" alt="Tivoli"></a>
+                	<h3>Tivoli’s Villas Tour</h3>
+                	<p>Discover the Roman Villa Adriana and the Renaissance Villa D’Este, two splendid villas from two different ages.</p>
+                </div>
+                <div class="Portfolio-box naples shore">
+                	<a href="#"><img src="media/tours/Positano-con-spiaggia-grande-wikimedia-by-Mihael-Grmek-560x460.jpg" alt="Amalfi Coast Tour near Naples"></a>
+                	<h3>Amalfi Coast Tour: Positano, Sorrento, Amalfi and Ravello</h3>
+                	<p>Full-day Sightseeing-tour.</p>
+                </div>
+                <div class="Portfolio-box naples shore">
+                    <a href="#"><img src="media/tours/Positano-amalfi-coast-wikimedia-by-Stepanie-Costa-560x460.jpg" alt="Pompeii and Positano Tour near Naples"></a>
+                    <h3>Pompeii and Positano Tour</h3>
+                    <p>Driving along the Sorrentina and Amalfi coasts, directed at SW of Mt. Vesuvius not far from the gulf of Naples</p>
+                </div>
+                <div class="Portfolio-box naples full-day shore">
+                    <a href="#"><img src="media/tours/Pompeii-and-Vesuvius-wikimedia-by-Sergey-Ashmarin-560x460.jpg" alt="Pompeii Vesuvius Hercolaneum near Naples"></a>
+                    <h3>Pompeii, Vesuvius and Herculaneum</h3>
+                    <p>Guided Tour in the Roman town known throughout the world for its tragic destruction, spectacular view of the Gulf of Naples</p>
+                </div>
+                <div class="Portfolio-box tuscany full-day shore">
+                    <a href="#"><img src="media/tours/firenze-sunset-wikimedia-by-Steve-Hersey-560x460.jpg" alt="Florence and Pisa in Tuscany Tour"></a>
+                    <h3>Florence &amp; Pisa Tour</h3>
+                    <p>A splendid excursion through the picturesque Tuscan countryside towards the beauties of Pisa and Florence.</p>
+                </div>
+                <div class="Portfolio-box tuscany full-day shore">
+                    <a href="#"><img src="media/tours/siena-piazza-del-campo-wikimedia-by-flissphil-560x460.jpg" alt="Siena Tuscany Tour"></a>
+                    <h3>Siena Tour</h3>
+                    <p>The embodiment of a medieval city, built around the Piazza del Campo, Siena was devised as a work of art that blends into the surrounding landscape.</p>
+                </div>
+                <div class="Portfolio-box tuscany full-day shore">
+                    <a href="#"><img src="media/tours/San_Gimignano-wikimedia-by-Basilio-Speziari-560x460.jpg" alt="San Gimignano Tour"></a>
+                    <h3>San Gimignano</h3>
+                    <p>A full-day driving and waling tour in the medieval town, fortress and museums of San Gimignano.</p>
+                </div>
+                <div class="Portfolio-box tuscany full-day half-day shore">
+                    <a href="#"><img src="media/tours/Wine-Tour-Tuscany-560x460.jpg" alt="Tuscany Wine Tasting"></a>
+                    <h3>Wine Tasting Tour in Tuscany</h3>
+                    <p>Chianti, Montalcino, Montepulciano... Discover of the most famous wines produced in this wonderful region.</p>
+                </div>
+    </div>
+</section><!--main-section-end-->
+
+<section class="main-section client-part" id="blog"><!--main-section client-part-start-->
+	<div class="container" id="blog-posts">
+		<h2>Recently on our Blog</h2>
+	</div>
+</section><!--main-section client-part-end-->
+<!--c-logo-part-start-->
+<div class="c-logo-part go-to-blog">
+	<div class="container">
+    	<h3><a href="/blog">Read more travel advice and news on Top Troust In Italy's blog <i class="fa fa-arrow-right"></i></a></h3>
+	</div>
+</div>
+<!--c-logo-part-end-->
+<section class="main-section team" id="team"><!--main-section team-start-->
+	<div class="container">
+        <h2>About Nick Solipaca</h2>
+        <h6></h6>
+        <div class="team-leader-block clearfix">
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-03s"> 
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="img/team-leader-pic1.jpg" alt="">
+                    <ul>
+                        <li><a href="#" class="fa-twitter"></a></li>
+                        <li><a href="#" class="fa-facebook"></a></li>
+                        <li><a href="#" class="fa-pinterest"></a></li>
+                        <li><a href="#" class="fa-google-plus"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-03s">Nick Solipaca</h3>
+                <span class="wow fadeInDown delay-03s">Certified Tour Director<br/>Authorized Tour Guide for Rome<br/>Authorized Vatican Museums Guide</span>
+                
+            </div>
+            <div class="team-leader-box">
+                <div class="wow fadeInDown delay-06s"> 
+                    <p align="left">Nick is not only a professional driver but also a Certified Tour Director and Tour Guide of Rome and its province. As such he has worked with various VIP clients such as <i>Caroline Kennedy, John Kusak, Dave Winfield, Kimberly Williams, Brad Paisley, Brian Williams, Katie Couric, Scott Hamilton</i>... The list could go on forever as Nick treats everyone like a VIP!</p>
+                    <p align="left">Just let Nick know what your needs and interests are, and he’ll make sure that you’ll remember forever your experience in his wonderful country: he’ll make sure that you’ll have an unforgettable once in a lifetime experience.</p>
+                    
+                 </div>
+            </div>
+            <div class="team-leader-box">
+            	<div class="wow fadeInDown delay-09s">
+                    <p align="left">In a few words right now showing tourists his beautiful country is what Nick’s job is all about, and he does it with great love and enthusiasm, and just because of his passion for what he does, Nick will be able to guide you on a tour of Rome and surroundings visiting the famous churches and squares and monuments and ancient roman ruins, and not only that, infact at a certain point the need to stop for bite will arise, and at that point Nick can take you to some of the best restaurants or rustic trattorias, those non tourists places where you’ll find only locals, and where you can taste delicious food at a very affordable price.</p>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--main-section team-end-->
+
+<section class="main-section alabaster" id="testimonial"><!--main-section client-part-start-->
+	<div class="container">
+		<h2>Testimonials</h2>
+		<h6>Here you can read just a few of the many letters of praise and thanks we get from our awesome customers from all over the world, after they decided to use our limousine service.</h6>
+    </div>
+        <!-- CAROUSEL -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <h2>Having one day at each location is not an easy task, but Nick managed to give us the highlights of each city.</h2>
+                    <p class="author"><a href="#">Read the full review by Julie Nickel</a></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <h2>Not having to wait in lines and still receive our own history tour made your services invaluable.</h2>
+                    <p class="author"><a href="#">Read the full review by Julie Nickel</a></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <h2>Your sense of humor and your wonderful choices for lunch were the icing on the cake.</h2>
+                    <p class="author"><a href="#">Read the full review by Julie Nickel</a></p>
+                </div>
+            </div>
+
+
+            <div class="item">
+             <div class="container">
+                    <h2>I was looking for a knowledgeable guide who was willing to explore off the beaten path. I found this in Nick.</h2>    
+                    <p class="author"><a href="#">Read the full review by Jo-Ann</a></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <h2>We laughed a lot, experienced much, and I left Italy with two friends who now can appreciate the country I so love!</h2>
+                    <p class="author"><a href="#">Read the full review by Jo-Ann</a></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <h2>Nick Solipaca provides an entire experience during his private tours. Speaks fluent English, fantastic humor, considerate to the interests and desires of those whom have hired his services</h2>
+                    <p class="author"><a href="#">Read the full review by John Flagler</a></p>
+                </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <h2>Courteous, clean, fun, detailed, “not too much” he doesn’t overwhelm you, we felt safe [...] I highly recommend his services when in Italy.</h2>
+                    <p class="author"><a href="#">Read the full review by John Flagler</a></p>
+                </div>
+            </div>
+
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <!-- end CAROUSEL -->
+        <div class="container">
+		<p><a href="https://www.tripadvisor.it/Attraction_Review-g187791-d4458769-Reviews-Top_Tours_in_Italy_Private_Day_Tours-Rome_Lazio.html" target="_blank"><img src="media/excellent-tripadvisor.png" width="300" align="right"/></a> If you are a current or former Top Tours In Italy customer and would like to share your service experience with our firm, we would love to hear about it from you! <a href="https://www.tripadvisor.it/UserReview-g187791-d4458769-ehttp%3A__2F____2F__www__2E__tripadvisor__2E__it__2F__Attraction__5F__Review__2D__g187791__2D__d4458769__2D__Reviews__2D__Top__5F__Tours__5F__in__5F__Italy__5F__Private__5F__Day__5F__Tours__2D__Rome__5F__Lazio__2E__html-Top_Tours_in_Italy_Private_Day_Tours-Rome_Lazio.html" target="_blank">Please conside rating us on TripAdvisor!</a></p>
+        </div>
+    </div>
+</section><!--main-section client-part-end-->
+
+
+
+<section class="business-talking"><!--business-talking-start-->
+	<div class="container">
+        <h2>Get In Touch.</h2>
+    </div>
+</section><!--business-talking-end-->
+<div class="container">
+<section class="main-section contact" id="contact">
+	
+        <div class="row">
+        	<div class="col-lg-6 col-sm-7 wow fadeInLeft">
+            	<div class="contact-info-box address clearfix">
+                	<h3><i class=" icon-map-marker"></i>Address:</h3>
+                	<span>308 Negra Arroyo Lane<br>Albuquerque, New Mexico, 87111.</span>
+                </div>
+                <div class="contact-info-box phone clearfix">
+                	<h3><i class="fa-phone"></i>Phone:</h3>
+                	<span>1-800-BOO-YAHH</span>
+                </div>
+                <div class="contact-info-box email clearfix">
+                	<h3><i class="fa-pencil"></i>email:</h3>
+                	<span>hello@knightstudios.com</span>
+                </div>
+            	<div class="contact-info-box hours clearfix">
+                	<h3><i class="fa-clock-o"></i>Hours:</h3>
+                	<span><strong>Monday - Thursday:</strong> 10am - 6pm<br><strong>Friday:</strong> People work on Fridays now?<br><strong>Saturday - Sunday:</strong> Best not to ask.</span>
+                </div>
+                <ul class="social-link">
+                	<!--<li class="twitter"><a href="#"><i class="fa-twitter"></i></a></li>-->
+                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <!--<li class="pinterest"><a href="#"><i class="fa-pinterest"></i></a></li>
+                    <li class="gplus"><a href="#"><i class="fa-google-plus"></i></a></li>
+                    <li class="dribbble"><a href="#"><i class="fa-dribbble"></i></a></li>-->
+                </ul>
+            </div>
+        	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
+            	<div class="form">
+                	<input class="input-text" type="text" name="" value="Your Name *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                    <input class="input-text" type="text" name="" value="Your E-mail *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+                	<textarea class="input-text text-area" cols="0" rows="0" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
+                    <input class="input-btn" type="submit" value="send message">
+                </div>	
+            </div>
+        </div>
+</section>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo slide"><a href="#header"><img src="img/footer-logo.png" alt=""></a></div>
+        <span class="copyright">Copyright © 2016 Nick Solipaca | Designed and Developed by <a href="http://ipassion.it/">iPassion</a></span>
+    </div>
+    <!-- 
+        All links in the footer should remain intact. 
+        Licenseing information is available at: http://bootstraptaste.com/license/
+        You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Knight
+    -->
+</footer>
+
+
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false    
+            
+        });
+        
+    });
+</script>
+
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+ 
+  </script>
+
+
+<script type="text/javascript">
+	$(window).load(function(){
+		
+		$('.main-nav li a').bind('click',function(event){
+			var $anchor = $(this);
+			
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 102
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+			event.preventDefault();
+		});
+	})
+	$(window).load(function(){
+		
+		$('.slide a').bind('click',function(event){
+			var $anchor = $(this);
+			
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 102
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+			event.preventDefault();
+		});
+	})
+</script>
+
+<script type="text/javascript">
+// Isotope Portfolio 
+
+$(window).load(function(){
+  
+  
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+
+  
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+  
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+    
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({	
+            filter: selector,
+         });
+         return false;
+    });
+
+  $container.isotope({ filter: '.featured' });
+  
+});
+
+function filterTours( theFilter ){
+    $('.portfolioFilter .current').removeClass('current');
+    $(".portfolioFilter a[data-filter='"+theFilter+"']").addClass('current');
+    $('.portfolioContainer').isotope({ filter: theFilter });
+}
+
+// Parallax effect
+/*
+$(document).ready(function(){
+   // cache the window object
+   $window = $(window);
+ 
+   $('section[data-type="background"]').each(function(){
+     // declare the variable to affect the defined data-type
+     var $scroll = $(this);
+                     
+      $(window).scroll(function() {
+        // HTML5 proves useful for helping with creating JS functions!
+        // also, negative value because we're scrolling upwards                             
+        var yPos = -($window.scrollTop() / $scroll.data('speed'));
+        yPos = -$scroll.data('speed');
+         
+        // background position
+        var coords = 'center '+ yPos + 'px';
+ 
+        // move the background
+        $scroll.css({ backgroundPosition: coords });    
+      }); // end window scroll
+   });  // end section function
+}); // close out script
+*/
+</script>
+
+<script type="text/javascript">
+	$(document).ready(getBlogPosts());
+</script>
+
+    <div id="cookies">
+        <p>This website uses cookies. By continuing to use this website, you consent to our use of these cookies. <a href="/privacy" target="_blank">More info</a> <a href="#" onclick="acceptCookies();" class="link">Accept</a></p>
+    </div>
+</body>
+</html>
