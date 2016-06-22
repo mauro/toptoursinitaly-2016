@@ -2,16 +2,7 @@
 	<div class="container">
         <div class="row">
             <div class="col-sm-3 wow fadeInDown delay-02s">
-                <div class="team-leader"> 
-                    <div class="team-leader-shadow"><a href="#"></a></div>
-                    <img src="media/nick-solipaca.jpg" alt="Nick Solipaca">
-                    <ul>
-                        <!--<a href="#" class="fa-twitter"></a></li>-->
-                        <li><a href="https://www.facebook.com/nick.solipaca" class="fa-facebook" target="_blank"></a></li>
-                        <!--<li><a href="#" class="fa-pinterest"></a></li>
-                        <li><a href="#" class="fa-google-plus"></a></li>-->
-                    </ul>
-                </div>
+                <img src="media/nick-solipaca.jpg" alt="Nick Solipaca" class="nick-photo" />
                 <h3 class="wow fadeInDown delay-03s">Nick Solipaca</h3>
                 <span class="wow fadeInDown delay-03s">Certified Tour Director<br/>Authorized Tour Guide for Rome<br/>Authorized Vatican Museums Guide</span>
                 

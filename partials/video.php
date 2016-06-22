@@ -20,8 +20,8 @@
     		<a href="#"><img src="img/logo.png" alt=""></a>	
     	</figure>-->
             <h1 class="animated fadeInDown delay-05s">
-            	Top Tours In Italy<br/>
-            	<small>by</small> Nick Solipaca
+            	<span class="line-one">Top Tours In Italy <small>by</small><br/></span>
+            	<span class="line-two">Nick Solipaca</span>
             </h1>
 
             <div class="we-create slide">

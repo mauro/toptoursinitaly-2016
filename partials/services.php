@@ -34,9 +34,8 @@
                 </div>
             </div>
             <figure id="mercedes" class="col-lg-6 col-sm-6  text-right wow fadeInUp delay-02s">
-            	<img src="media/mercedes.jpg" alt="">
+            	<img src="media/mercedes.jpg" alt="Mercedes-Benz Limousine Fleet">
             </figure>
-        
         </div>
 	</div>
 </section><!--main-section-end-->
@@ -51,7 +50,7 @@
 	<div class="container">
     	<div class="row">
 			<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-            	<img  src="media/tesserini.png" alt="">
+            	<img  src="media/tesserini.png" alt="Certified Licensed Private Tour Guide">
             </figure>
         	<div class="col-lg-7 col-sm-8 featured-work">
             	<h2>Excellence at your service</h2>
