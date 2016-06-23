@@ -7,7 +7,7 @@
 	        poster=""
 	    >
 	        <source 
-	            src="media/roma.m4v"
+	            src="/media/roma.m4v"
 	            type="video/mp4"
 	        >
 	        Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -39,7 +39,7 @@
             		</div>
 	            <a id="get-in-touch" class="link animated fadeInUp delay-05s" href="#contact">Get in Touch</a>
              </div> 
-        <div id="tripadvisor" class="slide"><a href="#excellence"><img src="media/excellent-tripadvisor.png" alt=""></a></div>
+        <div id="tripadvisor" class="slide"><a href="#excellence"><img src="/media/excellent-tripadvisor.png" alt=""></a></div>
         
         <div id="scrolldown" class="animated fadeInUp delay-1s slide"><a href="#service"><i class="fa fa-chevron-circle-down"></i></a></div>
     </header><!--header-end-->

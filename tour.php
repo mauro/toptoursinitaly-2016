@@ -5,7 +5,7 @@
     }
     $tour = get_tour($_REQUEST['slug']);
     if (empty($tour)) {
-        not_found();
+        not_found('We offer no tour by the name "'.$_REQUEST['slug'].'".<br/>Please check our Private Guided Tours to learn more.');
     } else {
         $title = $tour['title'];
     }

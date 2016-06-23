@@ -1,12 +1,14 @@
+ErrorDocument 404 /404.php
+
 Options +FollowSymLinks  
 RewriteEngine On 
 RewriteRule ^tour/(.*)$ ./tour.php?&slug=$1 [L,NC]
-RewriteRule ^tours/(.*)$ ./tours.php&current=$1 [L,NC]
+RewriteRule ^tours/(.*)$ ./tours.php?&current=.$1 [L,NC]
 RewriteRule ^privacy privacy.php [L,NC]
 RewriteRule ^testimonials testimonials.php [L,NC]
 
 Redirect 301 /get-a-quote /#contact
 Redirect 301 /tour-manager /#about
-Redirect 301 /airport-transfers /tour/airport-transfers
-Redirect 301 /shore-excursions-italy /?current=shore-excursions
-
+Redirect 301 /airport-transfers /tours/airport
+Redirect 301 /shore-excursions-italy /tours/shore-excursion
+Redirect 301 /private-tours /tours/all

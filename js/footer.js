@@ -8,6 +8,12 @@
       if (!results[2]) return '';
       return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
+  function getTheFilterByUrl() {
+    return '.'+window.location.href.split("/").pop();
+  }
+  function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+  }
 
 // Scroll to fixed
     $(document).ready(function(e) {
@@ -106,12 +112,24 @@
     });
 
   var theFilter = getParameterByName('current');
-  if (theFilter != null) {
-    filterTours(theFilter);
-    console.log('Current: '+theFilter);
+  if (theFilter == null) {
+    var theFilter = getTheFilterByUrl();
   }
-  else { 
-    $container.isotope({ filter: '.featured' });
+  console.log('Current: '+theFilter);
+  if ( isInArray(theFilter, ['.featured','.rome','.airport','.shore-excursion','.latium','.naples','.tuscany','.full-day','.half-day']) )
+  {
+    $container.isotope({ filter: theFilter });
+    filterTours(theFilter);
+  }
+  else {
+    if (theFilter == '.all') {
+      theFilter = '*';
+      $container.isotope({ filter: theFilter });
+      filterTours(theFilter);
+    }
+    else { 
+      $container.isotope({ filter: '.featured' });
+    }
   }
   
 });
@@ -120,6 +138,7 @@ function filterTours( theFilter ){
     $('.portfolioFilter .current').removeClass('current');
     $(".portfolioFilter a[data-filter='"+theFilter+"']").addClass('current');
     $('.portfolioContainer').isotope({ filter: theFilter });
+    console.log('Tours filtered to: '+theFilter);
 }
 
 // Parallax effect

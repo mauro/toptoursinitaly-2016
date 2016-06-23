@@ -48,4 +48,4 @@
 <![endif]-->
 
 </head>
-<body>
+<body class="<?php if (isset($body_class)) echo $body_class; ?>">

@@ -51,9 +51,9 @@ function htmlize($text) {
 	$text = '<p>' . preg_replace('#(<br>[\r\n]+){2}#', '</p><p>', $text) . '</p>';
 	return $text;
 }
-function not_found() {
+function not_found($error_message = NULL) {
 	header("HTTP/1.0 404 Not Found");
-    echo "Not Found.\n";
+    include('404.php');
     die();
 }
 ?>

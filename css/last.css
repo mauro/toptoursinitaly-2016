@@ -531,3 +531,40 @@ header#header.header h1 .line-two {
 	background: hsl(10, 70%, 50%);
 	opacity: 0.7;
 }
+body.not-found {
+	background-color: black;
+}
+#not-found {
+	padding: 50px;
+	color: white;
+	min-height: 50px;
+}
+#not-found img {
+	width: 100%;
+}
+#not-found h1, #not-found h2, #not-found h3 {
+	color: white;
+	text-align: left;
+	font-size: 20pt;
+	line-height: 24pt;
+}
+#not-found p, #not-found a {
+	font-size: 20pt;
+	line-height: 24pt;
+}
+#not-found a {
+	margin-top: 20px;
+	display: block;
+	background-color: rgba(77, 243, 232, 0.59);
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12pt;
+	width: 150px;
+	text-align: center;
+	border-radius: 20px;
+}
+#not-found a:hover {
+	background-color: rgba(77, 243, 232, 1.0);
+	color: gray;
+}
