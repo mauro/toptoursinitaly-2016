@@ -1,5 +1,6 @@
 /* @override 
-	http://localhost:8888/css/last.css */
+	http://localhost:8888/css/last.css
+	http://toptoursinitaly.net/css/last.css */
 
 a {
 	cursor: pointer !important;
@@ -33,6 +34,7 @@ figure {
 	top: 0;
 	left: 0;
 	position: absolute;
+	height: 100vh;
 }
 .videoBackground {
 	background: #222;
@@ -535,18 +537,30 @@ body.not-found {
 	background-color: black;
 }
 #not-found {
-	padding: 50px;
+	padding: 10vh;
 	color: white;
 	min-height: 50px;
+	height: 100vh;
 }
 #not-found img {
 	width: 100%;
+	position: absolute;
+	z-index: -1;
+	right: 0;
+	bottom: 0;
+	-webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-o-filter: blur(1px);
+	-ms-filter: blur(1px);
+	filter: blur(1px);
+	opacity: 0.8;
 }
 #not-found h1, #not-found h2, #not-found h3 {
 	color: white;
 	text-align: left;
 	font-size: 20pt;
 	line-height: 24pt;
+	display: block;
 }
 #not-found p, #not-found a {
 	font-size: 20pt;

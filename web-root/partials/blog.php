@@ -9,16 +9,17 @@
     	<h3><a href="/blog">Read more travel advice and news on Top Troust In Italy's blog <i class="fa fa-arrow-right"></i></a></h3>
 	</div>
 </div>
+
 <!--c-logo-part-end-->
 <script type="text/javascript">
 // Get Recent Blog Posts Through WordPress.com JSON API
     function getBlogPosts() {
-        jQuery.getJSON("https://public-api.wordpress.com/rest/v1.1/sites/toptoursinitaly.ipassion.it/posts/?number=4", function(data) {
+        jQuery.getJSON("http://toptoursinitaly.net/blog/wp-json/wp/v2/posts?filter[posts_per_page]=4", function(data) {
             var items = [];
             var limited_text = "";
-            jQuery.each(data.posts, function(key, post) {
-                limited_text = jQuery(post.content).text().split(' ').slice(0,39).join(' ');
-                items.push('<div class="col-sm-3"><h3>'+post.title+'</h3><div class="post-content">'+limited_text+'...</div><div class="read-more-link"><a href="'+post.URL+'">Read More <i class="fa fa-arrow-right"></i></a></div></div>');
+            jQuery.each(data, function(key,post) {
+                limited_text = jQuery(post.content.rendered).text().split(' ').slice(0,39).join(' ');
+                items.push('<div class="col-sm-3"><h3>'+post.title.rendered+'</h3><div class="post-content">'+limited_text+'...</div><div class="read-more-link"><a href="'+post.link+'">Read More <i class="fa fa-arrow-right"></i></a></div></div>');
                 });
             jQuery(items.join("")).appendTo('#blog-posts');
         });

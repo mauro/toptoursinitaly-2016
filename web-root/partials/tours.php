@@ -1,5 +1,5 @@
 <?php
-    require_once('data/functions.php');
+    require_once(dirname(dirname(__FILE__)).'/data/functions.php');
     $tours = get_tours();
 ?>
 <section class="main-section paddind" id="Portfolio"><!--main-section-start-->

@@ -1,0 +1,45 @@
+ErrorDocument 404 /404.php
+
+Options +FollowSymLinks  
+RewriteEngine On 
+RewriteRule ^2(.*)$ ./blog/2$1 [L,NC]
+RewriteRule ^tour/(.*)$ ./tour.php?&slug=$1 [L,NC]
+RewriteRule ^tours/(.*)$ ./tours.php?&current=.$1 [L,NC]
+RewriteRule ^privacy privacy.php [L,NC]
+RewriteRule ^testimonials testimonials.php [L,NC]
+
+Redirect 301 /get-a-quote /#contact
+Redirect 301 /tour-manager /#about
+Redirect 301 /airport-transfers /tours/airport
+
+Redirect 301 /shore-excursions-italy/pompeii-and-positano-tour/ /tour/pompeii-positano-tour
+Redirect 301 /shore-excursions-italy/pompeii-vesuvius-and-herculaneum/ /tour/pompeii-vesuvius-hercolaneum
+Redirect 301 /shore-excursions-italy/caserta-and-cassino-tour/ /tours/naples
+Redirect 301 /shore-excursions-italy/capri-island-tour/ /tours/shore-excursion
+Redirect 301 /shore-excursions-italy/pisa-and-florence-tour/ /tour/florence-pisa-tour
+Redirect 301 /shore-excursions-italy/pisa-viareggio-and-lucca-tour/ /tours/tuscany
+Redirect 301 /shore-excursions-italy/siena-tour/ /tour/siena-tour
+Redirect 301 /shore-excursions-italy/san-gimignano-tour/ /tour/san-gimignano-tour
+Redirect 301 /shore-excursions-italy/cinque-terre/ /tours/tuscany
+
+Redirect 301 /shore-excursions-italy/ /tours/shore-excursion
+Redirect 301 /shore-excursions/ /tours/shore-excursion
+
+Redirect 301 /private-tours/medieval-rome/ /tour/ancient-rome
+Redirect 301 /private-tours/papal-audience-and-blessing/ /tour/papal-audience
+Redirect 301 /private-tours/rome-by-night/ /tour/rome-by-nihgt
+Redirect 301 /private-tours/the-ancient-rome/ /tour/the-ancient-rome
+Redirect 301 /private-tours/romes-catacombs/ /tour/catacombs
+Redirect 301 /private-tours/rome-castles/ /tour/rome-castles
+Redirect 301 /private-tours/tivoli-villas/ /tour/tivoli-tour
+Redirect 301 /private-tours/vatican-tour/ /tour/vatican-tour
+Redirect 301 /private-tours/shopping-tours/ /tours/all
+Redirect 301 /private-tours/wine-tasting-tours/ /tour/wine-tasting-tuscany
+Redirect 301 /private-tours/wine-tasting-tours/wine-tasting-tour-in-the-roman-castles-district/ /tour/wine-tasting-tuscany
+Redirect 301 /private-tours/wine-tasting-tours/wine-tasting-tour-in-tuscany/ /tour/wine-tasting-tuscany
+Redirect 301 /rome-limousine-services/rome-highlights-tour/ /tour/best-of-rome-highlights
+Redirect 301 /private-tours/christian-tours-of-rome/ /tour/best-of-rome-highlights
+
+Redirect 301 /private-tours /tours/all
+
+

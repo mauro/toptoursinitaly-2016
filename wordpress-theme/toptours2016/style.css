@@ -1,0 +1,178 @@
+/* @override 
+	http://toptoursinitaly.net/blog/wp-content/themes/toptours2016/style.css */
+
+/*
+ Theme Name:   Top Tours 2016
+ Theme URI:    http://ipassion.it
+ Description:  Twenty Eleven Child Theme
+ Author:       Mauro Dalu
+ Author URI:   http://ipassion.it
+ Template:     twentyeleven
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen-child
+*/
+
+.alignright {
+	float: right;
+	margin: 20px;
+	margin-right: 0;
+}
+.alignleft {
+	float: left;
+	margin: 20px;
+	margin-left: 0;
+}
+
+#primary {
+	margin-bottom: 20px;
+}
+
+#content {
+	max-width: 980px;
+	margin: auto;
+}
+
+article, #comments {
+	margin: 50px;
+	box-sizing: border-box;
+	display: block;
+	vertical-align: top;
+	border: 1px solid #efefef;
+	-moz-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 10px 100px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+article p {
+	margin-bottom: 15px;
+}
+#comments {
+	padding: 20px;
+}
+.entry-image {
+	position: relative;
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+}
+.entry-image .background-effect {
+	height: 250px;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	overflow: hidden;
+	
+}
+.entry-image img {
+	height: 250px;
+}
+
+h2.entry-title {
+	font-size: 20pt;
+	padding: 20px;
+	background-color: #f0f0f0;
+}
+h1.entry-title {
+	padding: 20px;
+}
+.entry-meta {
+	padding: 20px;
+	text-align: right;
+}
+.comments-link {
+	display: none;
+}
+.entry-content {
+	padding: 20px;
+}
+.entry-footer {
+	padding: 20px;
+	padding-bottom: 50px;
+	font-size: x-small;
+	border-top: 1px solid #f5f5f5;
+}
+.entry-footer span {
+	display: inline-block;
+	margin-right: 5px;
+}
+#nav-above {
+	display: none;
+}
+#nav-below, #nav-single {
+	margin: 50px;
+	background-color: white;
+	padding: 20px;
+	border-radius: 20px;
+	border: 1px solid #efefef;
+	-moz-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 10px 100px rgba(0, 0, 0, 0.25);
+}
+.nav-next {
+	float: right;
+}
+.single .header-image {
+	background-size: cover;
+	background-color: hsl(10, 70%, 50%);
+	background-position: left center;
+	background-attachment: scroll;
+	background-repeat: repeat;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	display: block;
+	width: 100%;
+	height: 50vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.single #page-header {
+	background-color: hsla(10, 70%, 50%, 0.5);
+	background-image: none;
+	height: 50vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.single #page-header h1 {
+	color: white;
+	margin: auto;
+}
+.single #page-header h3 {
+	margin-top: 20px;
+}
+.single article {
+}
+.comment-form label {
+	width: 150px;
+}
+.comment-form input, .comment-form textarea {
+	border: 1px solid silver;
+	border-radius: 5px;
+}
+.comment-form p {
+	margin-bottom: 10px;
+}
+.comment-form .submit {
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: white;
+	background-color: #7bc575;
+	text-transform: uppercase;
+}
+.comment-form .submit:hover {
+	background-color: #367631;
+}
